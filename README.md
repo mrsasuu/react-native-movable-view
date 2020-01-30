@@ -34,7 +34,14 @@ import MovableView from 'react-native-movable-view'
     {views_you_want_to_be_movable}
 </MovableView>
 ```
-3. **That's all**. Now you can restart your app and enjoy movable views ;) 
+3. **Specify the spawn location**. Use the props **X** and **Y** to edit where the view will spawn.
+```javascript
+<MovableView X={'75%'} Y={'20%'}>
+    {views_you_want_to_be_movable}
+</MovableView>
+```
+
+4. **That's all**. Now you can restart your app and enjoy movable views ;) 
 
 *Example:*
 ```javascript
@@ -95,7 +102,7 @@ Having this reference you can change disabled status like this:
  this.move.changeDisableStatus();
 ```
 
-### Support
+### Original creator support
 In case of any problem or more custom solution, you can email me at:
  
 tomasz.przybyl.it@gmail.com
