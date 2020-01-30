@@ -5,11 +5,19 @@ import PropTypes from 'prop-types';
 export default class MovableView extends Component {
   constructor(props) {
     super(props);
+    var x = 0;
+    var y = 0;
+    if(props.X){
+      x = props.X;
+    }
+    if(props.Y){
+      y = props.Y;
+    }
     this.state = {
-      pan: new Animated.ValueXY(),
+      pan: new Animated.ValueXY({x: x, y: y}),
       disabled: props.disabled,
-      xOffset: 0,
-      yOffset: 0,
+      xOffset: x,
+      yOffset: y,
     };
 
     this.panResponder = PanResponder.create({
